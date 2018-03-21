@@ -27,3 +27,6 @@ RUN git clone "https://github.com/Kinggerm/GetOrganelle" && \
 ENV PATH "$HOME/GetOrganelle:$PATH"
 ENV PATH "$HOME/GetOrganelle/Utilities:$PATH"
 
+VOLUME /data
+
+WORKDIR /data
