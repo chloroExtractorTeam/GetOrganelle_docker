@@ -8,7 +8,7 @@ RUN apt install --yes \
     ncbi-blast+
 
 
-RUN apt install --yes wget python && \
+RUN apt install --yes wget python python-pip && \
     cd /tmp/ && \     
     wget http://cab.spbu.ru/files/release3.10.1/SPAdes-3.10.1-Linux.tar.gz && \
     tar -xzf SPAdes-3.10.1-Linux.tar.gz && \
@@ -17,7 +17,7 @@ RUN apt install --yes wget python && \
 
 ENV PATH "/opt/spades/bin:$PATH"
 
-
+RUN pip install numpy scipy sympy
 
 
 RUN git clone "https://github.com/Kinggerm/GetOrganelle" && \
